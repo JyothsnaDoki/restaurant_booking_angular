@@ -1,0 +1,80 @@
+<!-- <nav class="navbar navbar-dark navbar-expand-md bg-dark">
+    <div class="container-fluid"><a class="navbar-brand navbar_title" routerLink="">Delicia.com</a>
+        <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_about" routerLink="/about">About</a></li>
+
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_login" routerLink="/login">Login</a></li>
+
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_signup" routerLink="/signup">Signup</a></li>
+                
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_menu" routerLink="/menu">Menu</a></li>
+ 
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_contactus" routerLink="/contactus">ContactUs</a></li>
+                  
+                <li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link active navbar_login" routerLink="/profile/{{id}}">Profile</a></li>
+
+
+                  
+                <li [hidden]="!IsLoggedIn" class="nav-item"><a class="nav-link navbar_logout" (click)="Logout()">Logout</a></li>
+
+                
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+<nav class="navbar navbar-dark navbar-expand-md bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand navbar_title" routerLink="">Delicia.com</a>
+        <!-- <a class="navbar-brand" routerLink="">
+            <img src="/assets/img/Delicia.png" alt="Delicia Logo" width="40" height="40">
+            Delicia.com
+          </a>
+           -->
+        <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li [hidden]="!IsLoggedIn" class="nav-item">
+                    <a class="nav-link active navbar_login" routerLink="/showfeed">
+                        <i class="fas fa-comment"></i> Feedbacks
+                    </a>
+                </li>
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_about" routerLink="/about">About</a></li>
+
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_login" routerLink="/login">Login</a></li>
+
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_signup" routerLink="/signup">Signup</a></li>
+                
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_menu" routerLink="/menu">Menu</a></li>
+ 
+                <li [hidden]="IsLoggedIn" class="nav-item"><a class="nav-link active navbar_contactus" routerLink="/contactus">ContactUs</a></li>
+                <li [hidden]="!IsLoggedIn" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hello, {{userName}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/profile/{{id}}">
+                            <i class="fas fa-user-circle"></i> Profile
+                        </a>
+                        <a class="dropdown-item" routerLink="/bookuser/{{id}}">
+                            <i class="fas fa-shopping-cart"></i> Orders
+                        </a>
+                        <a class="dropdown-item" (click)="Logout()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                        
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>

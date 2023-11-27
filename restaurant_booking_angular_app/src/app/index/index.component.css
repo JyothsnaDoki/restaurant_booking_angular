@@ -1,0 +1,17 @@
+.video-container{
+    position: absolute;
+    top:0; left:0;
+    height :100vh;
+    width:100%;
+    z-index:-1;
+}
+    .vid{
+        position: absolute;
+        height :100vh;
+        width:100%;
+        object-fit: cover;
+        display:none;
+    }
+    .vid1{
+        display:block;
+    }

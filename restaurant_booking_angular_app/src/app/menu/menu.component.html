@@ -1,0 +1,64 @@
+<!-- <h1 class="text-center">Menu</h1>
+
+<div class="form-group">
+    <input type="text"  class="form-control pl-5 mt-3" [(ngModel)]="searchTerm" (keyup)="search($event)"  placeholder="Search Items">  
+    <span class="fas fa-search search-icon"></span>
+
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of  item | filter:searchKey: 'itemName'">
+            <div class="card col-md-3 rounded">
+                <img src="{{item.image}}" alt="person-1">
+                <h5>{{item.itemName}}</h5>
+                <p><strong>Price:</strong>{{item.price}}</p>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+               
+    
+            </div>
+
+        </ng-container>
+       
+    </div>
+</div> -->
+
+<h1 class="text-center">Menu</h1>
+
+<div class="form-group">
+    <input type="text"  class="form-control pl-5 mt-3" [(ngModel)]="searchTerm" (keyup)="search($event)"  placeholder="Search Items">  
+    <span class="fas fa-search search-icon"></span>
+
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of  item | filter:searchKey: 'itemName'">
+            <div class="card col-md-3 rounded">
+                <img src="{{item.image}}" alt="person-1">
+                <h5>{{item.itemName}}</h5>
+                <p><strong>Price: </strong>{{item.price}}</p>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <div class="stars " style="color: red ; align-items: center;" >
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <button class="btn btn-danger" routerLink="/login">Add to cart</button>
+            </div>
+
+        </ng-container>
+       
+    </div>
+</div>
+

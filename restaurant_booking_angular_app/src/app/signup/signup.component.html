@@ -1,0 +1,141 @@
+<!-- <div class="register-card"><img class="profile-img-card" src="assets/img/login.jpeg"  />
+    <p class="profile-name-card"></p>
+    <form [formGroup]="form" (ngSubmit)="submit()"  class="form-signup"><span class="reauth-email"></span>
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="userName" type="text" class="form-control" id="userName" required placeholder="UserName" autofocus />
+                <div *ngIf="f['userName'].touched && f['userName'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['userName'].errors && f['userName'].errors['required']">UserName is required!!</div>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="email" type="email" class="form-control" id="inputEmail" required placeholder="Email address" autofocus />
+                <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required!!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input #PWD formControlName="password" type="password" class="form-control" id="inputPassword" required placeholder="Password" />
+                <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <input #PWD formControlName="confirmPassword" type="password" class="form-control" id="inputPassword" required placeholder="Confirm Password" />
+                <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Confirm Password is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="contact" type="text" class="form-control" id="contact" required placeholder="Contact" autofocus />
+                <div *ngIf="f['contact'].touched && f['contact'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['contact'].errors && f['contact'].errors['required']">ContactNumber is required.</div>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="userType" type="text" class="form-control" id="userType" required placeholder="UserType" autofocus />
+                <div *ngIf="f['userType'].touched && f['userType'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['userType'].errors && f['userType'].errors['required']">UserType is required.</div>
+                </div>
+            </div>
+        </div>
+        
+        
+       
+        <button class="btn btn-primary btn-block btn-lg btn-signup" type="submit" [disabled]="!form.valid"  >Sign Up</button>
+        </form>
+            <a class="forgot-password" routerLink="/login">Already a User ?</a></div>
+
+
+
+
+
+
+
+            <style>
+               
+
+            </style> -->
+
+
+
+            <div class="register-card"><img class="profile-img-card" src="assets/img/login.jpeg"  />
+                <p class="profile-name-card"></p>
+                <div class="alert alert-danger" *ngIf="duplicateUserError">
+                    You are already a registered user. Please try to log in.
+                  </div>
+                <form [formGroup]="form" (ngSubmit)="submit()"  class="form-signup"><span class="reauth-email"></span>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input #Email formControlName="userName" type="text" class="form-control" id="userName" required placeholder="UserName" autofocus />
+                            <div *ngIf="f['userName'].touched && f['userName'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['userName'].errors && f['userName'].errors['required']">UserName is required!!</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            
+                            <input #Email formControlName="email" type="email" class="form-control" id="inputEmail" required placeholder="Email address" autofocus />
+                            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required!!</div>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div>
+            
+                    <div class="row">
+                        
+                            <div class="col-md-6 form-group">
+                            <input #PWD formControlName="password" type="password" class="form-control" id="inputPassword" required placeholder="Password" />
+                            <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            
+                            <input #PWD formControlName="confirmPassword" type="password" class="form-control" id="inputPassword" required placeholder="Confirm Password" />
+                            <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Confirm Password is required.</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+            
+                    <div class="row">
+                        
+                            <div class="col-md-6 form-group">
+                            <input #Email formControlName="contact" type="text" class="form-control" id="contact" required placeholder="Contact" autofocus />
+                            <div *ngIf="f['contact'].touched && f['contact'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['contact'].errors && f['contact'].errors['required']">ContactNumber is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input #Email formControlName="userType" type="text" class="form-control" id="userType" required placeholder="Address" autofocus />
+                            <div *ngIf="f['userType'].touched && f['userType'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['userType'].errors && f['userType'].errors['required']">Address is required.</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                   
+                    <button class="btn btn-primary btn-block btn-lg btn-signup" type="submit" [disabled]="!form.valid"  >Sign Up</button>
+                    </form>
+                        <a class="forgot-password" routerLink="/login">Already a User ?</a></div>
+            
+            
+            
+            
+            
+            
+            
+                       
+            

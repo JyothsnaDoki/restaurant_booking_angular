@@ -1,0 +1,46 @@
+<div class="container">
+    <h1 class="text-center my-3">My Profile</h1>
+    
+    <div class="login-card">
+        <img class="profile-img-card" src="assets/img/customer.png" />
+        <p class="profile-name-card"></p>
+        
+        <div class="col-md-12">
+            <div class="text-center mb-3">
+                <strong>Username:</strong> {{ user.userName }}
+            </div>
+            
+            <div class="text-center mb-3">
+                <strong>Email:</strong> {{ user.email }}
+            </div>
+            <div class="text-center mb-3">
+                <strong>Password:</strong>
+                <div class="input-group" style="width: 50%; margin-left: 26%;">
+                    <input 
+                        id="password" 
+                        [type]="passwordVisible ? 'text' : 'password'" 
+                        [(ngModel)]="user.password"
+                        class="form-control no-border smaller-input" />
+                    <span class="input-group-text" (click)="togglePasswordVisibility()">
+                        <i class="fas" [ngClass]="passwordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+                    </span>
+                </div>
+            </div>
+            
+              
+            <div class="text-center mb-3">
+                <strong>Contact:</strong> {{ user.contact }}
+            </div>
+            <div class="text-center mb-3">
+                <strong>Address:</strong> {{ user.userType }}
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center my-2"><a class="btn btn-primary edit_profile_btn" routerLink="/editProfile/{{userId}}">Edit Profile</a></p>
+            </div>
+        </div>
+        
+    </div>
+</div>

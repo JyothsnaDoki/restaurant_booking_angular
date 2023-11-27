@@ -1,0 +1,31 @@
+/* image-display.component.css */
+.image-container {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+.btn-custom {
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 60px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    /* Add any other styles you need */
+  }
+  
+   /* image-display.component.css */
+.fa {
+    font-size: 13px; /* Adjust the icon size as needed */
+    color: black; /* Change the icon color as needed */
+    margin-right: 5px; /* Add spacing between the icon and text */
+  }
+  
+  button {
+    padding: 3px 5px;
+    margin: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

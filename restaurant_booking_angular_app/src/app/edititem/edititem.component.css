@@ -1,0 +1,122 @@
+.confirmation {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.order-details, address {
+    text-align: left;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64a19;
+}
+.btn-custom {
+  background-color: blue;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 50px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
+  /* Add any other styles you need */
+}
+/* Style the button container */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Add space between buttons */
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+
+
+.container {
+    width: 45%; /* Adjust the width as desired */
+    margin: 20px auto; /* Add some margin around the container */
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #ccc; /* Add a border around the container */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    box-sizing: border-box; /* Include padding and border in the width */
+    /* Add other styles as needed */
+  }
+  
+  
+  
+  .formbold-mb-5 {
+    margin-bottom: 10px; /* Increase or decrease margin as needed */
+    /* Add other styles as needed */
+  }
+  
+  .formbold-form-label {
+    font-weight: bold;
+    /* Add other styles as needed */
+  }
+  
+  .form-bold-input {
+    width: calc(100% - 20px); /* Adjust input width, considering padding */
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    /* Add other styles as needed */
+  }
+  
+  .formbold-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Add other styles as needed */
+  }
+  
+  .formbold-btn:hover {
+    background-color: #0056b3;
+    /* Adjust color on hover as desired */
+  }
+  

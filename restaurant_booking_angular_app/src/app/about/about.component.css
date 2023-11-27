@@ -1,0 +1,129 @@
+*{
+    margin:0px;
+    padding :0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.heading{
+    text-align: center;
+    margin-top: 25px;
+}
+.heading h1{
+    font-size: 50px;
+    color: #36455c;
+    margin-bottom: 10px;
+}
+.heading p{
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 50px;
+}
+.about-us{
+    display:flex;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+.about-us img{
+    flex:0 50%;
+    max-width: 50%;
+    height: auto;
+}
+.content{
+    padding:0 35px 35px 35px;
+    
+}
+.content p{
+    color:#666;
+    font-size: 18px;
+    line-height: 1.5;
+   
+}
+
+/* Styles for the Delicia Food Delivery News Journal */
+
+.outer {
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .news-journal {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .news-article {
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .article-content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+
+  /* Reset some default styles for consistency */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the header */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Create a grid layout for chefs */
+.chef-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style each chef card */
+.chef-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style chef images */
+.chef-image {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Add some spacing to text */
+h2, p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}

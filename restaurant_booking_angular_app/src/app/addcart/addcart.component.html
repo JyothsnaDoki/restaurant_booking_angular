@@ -1,0 +1,51 @@
+<section class="outer">
+    <div class="container">
+    <div class="card">
+        <h4 class="card-title">My Cart</h4>
+        <div class="card-table">
+            <div class="library-product">
+                <table class="table table-response">
+                    <thead>
+                        <tr style="border: 3px;">
+                            <th>Sr.No</th>
+                            <th>Item Name</th>
+                            <th>Item Image</th>
+                            <th>Item description</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <tr style =" border: 3px;" *ngFor="let item of items; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.itemName}}</td>
+                            <td><img style="height: 200px; width: 200px;" src="{{item.image}}"/></td>
+                            <td>{{item.description}}</td>
+                            <td>{{item.price}}</td>
+                            <td>
+                                <button (click)="removecartItem(item)" class="btn btn-danger" style="margin: 3px;"><i class="fas fa-trash-alt"></i></button>
+                                
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                    <td>
+                        <strong>Grand total: ${{grandtotal}}</strong>
+                    </td>
+                </table>
+                
+            </div>
+        
+            <button style="height: 20px; width: 100px; block-size: 50px; margin: 30px; align-items:center; color: whitesmoke; background-color:black; font-weight: bolder;" routerLink="/viewitems" >Add More</button>
+            <button class="btn btn-primary" (click)="buttonClick()" style="height: 50px; width: 130px; block-size: 50px; margin: 30px; align-items:center; display:flex; color: whitesmoke; background-color:black; font-weight: bolder;" >Order Now</button>
+    </div>
+    
+</div>
+
+</div>
+
+
+
+
+</section>

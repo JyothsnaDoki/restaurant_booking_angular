@@ -1,0 +1,95 @@
+<!-- <div class="item-card"><img class="item-img-card" src="assets/img/add.png" />
+    <p class="item-name-card"></p>
+    <form [formGroup]="form" (ngSubmit)="submit()" class="form-item"><span class="additem"></span>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <input #Email formControlName="itemName" type="text" class="form-control" id="itemName" required placeholder="itemName " autofocus />
+                <div *ngIf="f['itemName'].touched && f['itemName'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['itemName'].errors && f['itemName'].errors['required']">itemName is required.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="description" type="text" class="form-control" id="description" required placeholder="description" autofocus />
+                <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="price" type="number" class="form-control" id="price" required placeholder="price" autofocus />
+                <div *ngIf="f['price'].touched && f['price'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['price'].errors && f['price'].errors['required']">price is required.</div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="itemAvailability" type="text" class="form-control" id="itemAvailability" required placeholder="itemAvailability" autofocus />
+                <div *ngIf="f['itemAvailability'].touched && f['itemAvailability'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['itemAvailability'].errors && f['itemAvailability'].errors['required']">itemAvailability is required.</div>
+                </div>
+            </div>
+            <div class="col-md-6 form-group">
+                <input #Email formControlName="image" type="text" class="form-control" id="image" required placeholder="image" autofocus />
+                <div *ngIf="f['image'].touched && f['image'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['image'].errors && f['image'].errors['required']">image are required.</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-block btn-lg btn-add" type="submit">Add</button>
+        </form> -->
+
+
+        <div class="item-card">
+            <img class="item-img-card" src="assets/img/add.png" />
+            <p class="item-name-card"></p>
+            <form [formGroup]="form" (ngSubmit)="submit()" class="form-item">
+              <span class="additem"></span>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input formControlName="itemName" type="text" class="form-control" id="itemName" required placeholder="Item Name" autofocus />
+                  <div *ngIf="f['itemName'].touched && f['itemName'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['itemName'].errors && f['itemName'].errors['required']">Item Name is required.</div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input formControlName="description" type="text" class="form-control" id="description" required placeholder="Description" autofocus />
+                  <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['description'].errors && f['description'].errors['required']">Description is required.</div>
+                  </div>
+                </div>
+                 <div class="col-md-6 form-group">
+                  <input formControlName="price" type="number" class="form-control" id="price" required placeholder="Price" autofocus />
+                  <div *ngIf="f['price'].touched && f['price'].invalid" class="alert alert-danger">price should be +ve
+                    <div *ngIf="f['price'].errors && f['price'].errors['required']">Price is required.</div>
+                    <!-- <div *ngIf="f['price'].errors && f['price'].errors['invalidPrice']">Price should be +Ve</div> -->
+                  </div>
+                </div> 
+                
+              </div>
+          
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input formControlName="itemAvailability" type="text" class="form-control" id="itemAvailability" required placeholder="Item Availability" autofocus />
+                  <div *ngIf="f['itemAvailability'].touched && f['itemAvailability'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['itemAvailability'].errors && f['itemAvailability'].errors['required']">Item Availability is required.</div>
+                  </div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input formControlName="image" type="text" class="form-control" id="image" required placeholder="Image" autofocus />
+                  <div *ngIf="f['image'].touched && f['image'].invalid" class="alert alert-danger my-2">
+                    <div *ngIf="f['image'].errors && f['image'].errors['required']">Image is required.</div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block btn-lg btn-add" type="submit">Add</button>
+            </form>
+          </div>
+          

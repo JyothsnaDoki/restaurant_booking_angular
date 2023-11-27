@@ -1,0 +1,71 @@
+.btn-custom {
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 70px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    /* Add any other styles you need */
+  }
+  
+ /* Global container styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+/* Back button styling */
+
+
+/* Form container styling */
+.formbold-main-wrapper {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form label styling */
+.formbold-form-label {
+    font-weight: bold;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Form input styling */
+.form-bold-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Submit button styling */
+.formbold-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons */
+.btn-custom:hover,
+.formbold-btn:hover {
+    background-color: #0056b3;
+}

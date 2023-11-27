@@ -1,0 +1,51 @@
+<a href="#" routerLink="/customerDashboard" class="btn btn-primary btn-custom">Buy More</a>
+    
+  <div class="confirmation">
+    <h1><strong>Order Confirmation</strong> </h1>
+    <img src='https://th.bing.com/th/id/R.ceccbdf1e907d376dc4d3a19da38e778?rik=PmrS2THW7oqYiw&riu=http%3a%2f%2fprogrammingtoweb.com%2fprogram%2fpos%2flogin%2f779b9dc3928c2dbc304bcf6702bef6df.gif&ehk=Tvg7alyT54wnFhz%2fy0q48GiCOdvmJq%2bh2PwPu92vVkc%3d&risl=&pid=ImgRaw&r=0'
+     style="height: 60%; width: 60%;">
+    <br>
+   
+    <p>Thank you for ordering from Delicia FoodApp!</p>
+   
+   
+    <p>Estimated delivery time is <strong>30 minutes</strong>  to <strong>{{ userType }}</strong></p>
+   <!-- <p> {{ totalCost }}</p> -->
+    
+     <div class="button-container">
+        <button class="btn" routerLink="/map">Track</button>
+        <!-- <button class="btn btn-info" (click)=" generatePDF()">
+            Download PDF
+          </button> -->
+        
+        <button class="btn" (click)="generatePDF()">Bill</button>
+     
+         
+        <button class="btn" routerLink="/createfeed">FeedBack</button>
+      </div>
+
+</div>
+<div class="container">
+  
+  <div class="formbold-main-wrapper">
+    <div class="order-confirmation-container">
+      <form [formGroup]="form" action="javascript:void(0);" (submit)="send()">
+        <div class="formbold-mb-5">
+          <label for="email" class="formbold-form-label">Email Id</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            [value]="email"
+            placeholder="Enter your email id"
+            class="form-bold-input"
+          />
+        </div>
+ 
+        <div>
+          <button  type="submit" class="formbold-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

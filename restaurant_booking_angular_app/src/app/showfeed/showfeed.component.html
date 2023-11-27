@@ -1,0 +1,36 @@
+<div class="container">
+    <a href="#" routerLink="/adminDashboard" class="btn btn-primary btn-custom">Back</a>
+      <h1 class="text-center my-5 items_title">Users Feedback</h1>
+    
+      <p class="text-center text-muted mt-5 mb-0"><a href="#!"
+        class="forgot-password" routerLink="/adminDashboard"></a>
+  
+  
+  <table class="table table-striped ">
+      <thead>
+        <tr>
+        <th scope="col">ItemName</th>
+          <th scope="col">Review</th>
+          <th scope="col">Rating</th>
+        </tr>
+      </thead>
+     
+      <!-- <tbody>
+          <tr *ngFor="let User of User">
+              <td>{{User.text}}</td>
+              <td>{{User.rating}}</td>
+          </tr> 
+       
+      </tbody> -->
+      <tbody>
+        <tr *ngFor="let user of User">
+          <td>{{user.itemName}}</td>
+          <td>{{ user.text }}</td>
+          <td>
+            <span class="star-rating">{{ user.rating | starRating }}</span>
+          </td>
+        </tr>
+      </tbody>
+      
+  </table>
+  </div>

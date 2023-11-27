@@ -1,0 +1,39 @@
+
+<h3 class="text-center my-5 items_title">Items Available</h3>
+<a href="#" routerLink="/adminDashboard" class="btn btn-primary btn-custom">Back</a>
+<div class="container">
+    <div class="card items_card">
+        <div class="card-body">
+            
+        
+    <table class="table table-striped text-center">
+        <tr>
+            <th>ItemId</th>
+            <th>ItemName</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Availability</th>
+            <th>Actions</th>
+           
+        </tr>
+        <tr *ngFor="let item of item">
+            <td>{{item.itemId}}</td>
+            <td>{{item.itemName}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price}}</td>
+            <td><img width =90 height=50 src="{{item.image}}" alt=""></td>
+            <td>{{item.itemAvailability}}</td>
+           
+            <td>
+                <button [hidden]="isAdmin"  type="button" (click)="deletePost(item.itemId)" class="btn btn-danger">Delete</button>
+            </td>
+             <!-- <td>
+                <button  type="button"  class="btn btn-primary" (click)="addtocart(item)" routerLink="/addcart">Add to Cart</button>
+            </td> -->
+        </tr>
+    </table>
+
+</div>
+</div>
+</div>
