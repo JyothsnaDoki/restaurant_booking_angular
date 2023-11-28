@@ -27,26 +27,27 @@ import { ViewCartComponent } from './view-cart/view-cart.component';
 import { ViewitemsadComponent } from './viewitemsad/viewitemsad.component';
 import { BookuserComponent } from './bookuser/bookuser.component';
 import { AuthGuard } from './auth.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
 
   {path:"",component:IndexComponent},
   {path:"login",component:LoginComponent},
   {path:"profile/:userId",component:ProfileComponent},
    {path:"signup",component:SignupComponent},
-   {path:"customerDashboard",component:CustomerDashboardComponent},
-   {path:"adminDashboard",component:AdminDashboardComponent},
-   {path:"viewitems",component:ViewitemsComponent},
+   {path:"customerDashboard",component:CustomerDashboardComponent,canActivate:[AuthGuard]},
+   {path:"adminDashboard",component:AdminDashboardComponent,canActivate:[AuthGuard]},
+   {path:"viewitems",component:ViewitemsComponent,canActivate:[AuthGuard]},
    {path:"about",component:AboutComponent},
    {path:"contactus",component:ContactusComponent},
    {path:"menu",component:MenuComponent},
-   {path:"editProfile/:userId",component:EditProfileComponent},
-   {path:"viewProfile",component:ViewprofileComponent},
-   {path:"additem",component:AdditemComponent},
+   {path:"editProfile/:userId",component:EditProfileComponent,canActivate:[AuthGuard]},
+   {path:"viewProfile",component:ViewprofileComponent,canActivate:[AuthGuard]},
+   {path:"additem",component:AdditemComponent,canActivate:[AuthGuard]},
    {path:"addcart",component:AddcartComponent},
    {path:"createitem",component:CreateitemComponent},
-   {path:"book/:itemId",component:BookComponent},
-   {path:"bankcheck",component:BankcheckComponent},
-   {path:"edititem",component:EdititemComponent},
+   {path:"book/:itemId",component:BookComponent,canActivate:[AuthGuard]},
+   {path:"bankcheck",component:BankcheckComponent,canActivate:[AuthGuard]},
+   {path:"edititem",component:EdititemComponent,canActivate:[AuthGuard]},
    {path:"createfeed",component:CreatefeedComponent},
    {path:"showfeed",component:ShowfeedComponent},
    {path:"details",component:DetailsComponent},
@@ -55,7 +56,7 @@ const routes: Routes = [
    {path:"Viewitemsad",component:ViewitemsadComponent},
    {path:"viewCart",component:ViewCartComponent},
    {path:"bookuser/:userId",component:BookuserComponent},
-   { path: '', component: IndexComponent, canActivate: [AuthGuard] },
+   {path:'**',component:NotFoundComponent}
   
 ];
 

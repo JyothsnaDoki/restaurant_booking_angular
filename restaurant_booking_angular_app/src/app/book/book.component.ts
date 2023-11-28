@@ -40,6 +40,10 @@ export class BookComponent implements OnInit {
   flag: boolean = false;
   selectedItem: any; // Use @Input to receive data from parent component
   price: number = 0; // Initialize price to 0
+  IsLoggedIn:boolean=false;
+  IsCustomer:boolean=false;
+  userId!:number;
+
 
   constructor(
     public dataService: DataService,
@@ -53,7 +57,8 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {
     this.selectedItem = history.state.selectedItem;
     this.form = this.formBuilder.group({
-      userId: [3, Validators.required],
+     // userId: [3, Validators.required],
+      userId:[null],
       itemId: [this.selectedItem.itemId, Validators.required],
       itemName: [this.selectedItem.itemName, Validators.required],
       quantity: [this.selectedItem.quantity, [Validators.required, Validators.min(1)]],
@@ -63,6 +68,14 @@ export class BookComponent implements OnInit {
 
     // Fetch the price from the selected item
     this.price = this.selectedItem.price;
+
+    this.IsLoggedIn = localStorage.getItem('User') != null;
+    var x = localStorage.getItem('User');
+    if (x) {
+      this.IsCustomer = JSON.parse(x).value.username == 'Customer';
+      this.userId = JSON.parse(x).value.userId;
+      this.form.patchValue({ userId: this.userId });
+    }
 
     this.selectedItem = history.state.selectedItem;
     this.postService.getAll().subscribe((data: Data[]) => {

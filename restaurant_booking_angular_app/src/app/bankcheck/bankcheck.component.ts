@@ -8,20 +8,50 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AbstractControl, ValidatorFn } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
  
+// export function futureDateValidator(): ValidatorFn {
+//   return (control: AbstractControl): { [key: string]: any } | null => {
+   
+//     const currentDate = new Date();
+//     const currentYear = currentDate.getFullYear() % 100; // Get last two digits of the current year
+//     const currentMonth = currentDate.getMonth() + 1;
+//     const inputDate = control.value ? new Date(control.value + 'T00:00:00') : null;
+//     if (inputDate &&inputDate  <= currentDate) {
+//       return { futureDate: true };
+//     }
+//     return null;
+//   };
+// }
 export function futureDateValidator(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: any } | null => {
-   
     const currentDate = new Date();
-    const currentYear = currentDate.getFullYear() % 100; // Get last two digits of the current year
+    const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
-    const inputDate = control.value ? new Date(control.value + 'T00:00:00') : null;
-    if (inputDate &&inputDate  <= currentDate) {
-      return { futureDate: true };
+
+    const inputDate = control.value ? control.value.split('/') : null;
+
+    if (
+      inputDate &&
+      inputDate.length === 2 &&
+      inputDate[0] &&
+      inputDate[1] &&
+      /^\d{2}$/.test(inputDate[0]) &&
+      /^\d{4}$/.test(inputDate[1])
+    ) {
+      const expiryMonth = +inputDate[0];
+      const expiryYear = +inputDate[1];
+
+      if (
+        expiryYear > currentYear ||
+        (expiryYear === currentYear && expiryMonth >= currentMonth)
+      ) {
+        return null; // Future date
+      }
     }
-    return null;
+
+    return { futureDate: true }; // Not a future date or invalid format
   };
 }
- 
+
 @Component({
   selector: 'app-bankcheck',
   templateUrl: './bankcheck.component.html',

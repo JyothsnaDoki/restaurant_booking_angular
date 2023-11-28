@@ -105,7 +105,7 @@ export class AdditemComponent implements OnInit {
   submit() {
     console.log(this.form.value);
     this.dataService.create(this.form.value).subscribe((res: any) => {
-      alert("Item has been successfully created");
+      alert("Item has been successfully added");
       console.log('Item added successfully!');
       this.form.reset();
     })

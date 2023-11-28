@@ -1,0 +1,10 @@
+.container {
+    text-align: center; /* Center-align content */
+    padding-top: 50px; /* Adjust spacing */
+  }
+  
+  img {
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  

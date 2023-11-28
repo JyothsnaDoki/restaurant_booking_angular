@@ -34,6 +34,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { ViewitemsadComponent } from './viewitemsad/viewitemsad.component';
 import { BookuserComponent } from './bookuser/bookuser.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -72,6 +73,7 @@ import { BookuserComponent } from './bookuser/bookuser.component';
         ViewCartComponent,
         ViewitemsadComponent,
         BookuserComponent,
+        NotFoundComponent,
       
         
        

@@ -15,10 +15,10 @@
               </div>
    
               <div class="form-group">
-                <label for="ExpiryDate" class="form-label">Expiry Date:</label>
-                <input type="text" id="ExpiryDate" name="ExpiryDate" [(ngModel)]="ExpiryDate" placeholder="MM/YY" class="form-control"required pattern="(0[1-9]|1[0-2])\/(2[3-9]|1[0-9])">
+                <label for="ExpiryDate" class="form-label">Expiry Date (MM/YYYY):</label>
+                <input type="text" id="ExpiryDate" name="ExpiryDate" [(ngModel)]="ExpiryDate" placeholder="MM/YYYY" class="form-control" required pattern="(0[1-9]|1[0-2])\/(2\d{3})">
                 <div *ngIf="bankForm.controls['ExpiryDate'].invalid && (bankForm.controls['ExpiryDate'].dirty || bankForm.controls['ExpiryDate'].touched)" class="alert alert-danger">
-                  Expiry date is required and should be a future date.
+                  Expiry date is required and should be a future date in MM/YYYY format.
                 </div>
               </div>
              
