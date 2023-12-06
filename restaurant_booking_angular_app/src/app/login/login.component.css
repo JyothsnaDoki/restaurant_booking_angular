@@ -89,4 +89,20 @@
     color: rgb(246, 253, 248);
   }
   
- 
+  .input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px; /* Adjust the left distance as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #aaa; /* Adjust the icon color as needed */
+}
+
+.input-group input {
+    padding-left: 30px; /* Adjust the left padding to create space for the icon */
+}

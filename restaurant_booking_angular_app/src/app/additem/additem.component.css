@@ -71,5 +71,15 @@
     padding: 0;
   }
   
- 
+  .btn-custom {
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 70px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    /* Add any other styles you need */
+  }
+  
+   
  
